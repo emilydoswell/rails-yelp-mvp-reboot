@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   get "restaurants/:id", to: "restaurants#show"
 
   # A visitor can add a new review to a restaurant
-  # GET "restaurants/38/reviews/new"
-  # POST "restaurants/38/reviews"
+  get "restaurants/38/reviews/new", to: "reviews#new"
+  post "restaurants/38/reviews", to: "reviews#create"
 end
+
+# resources :restaurants, only: [:index, :show, :new, :create] do
+#   resources :reviews, only: [:create]
+# end
