@@ -8,8 +8,12 @@
 
 CATEGORIES = ["chinese", "italian", "japanese", "french", "belgian"]
 
-puts "starting seed"
+puts "cleaning database"
+# Clean the database
+Restaurant.destroy_all
+puts "database is clean"
 
+puts "starting seed"
 5.times do |restaurant|
   Restaurant.create!(
     name: "Wagamummas",
@@ -18,5 +22,4 @@ puts "starting seed"
     category: CATEGORIES[rand(0..4)]
   )
 end
-
 puts "ending seed"
