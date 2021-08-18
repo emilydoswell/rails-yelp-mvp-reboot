@@ -10,6 +10,8 @@ class ReviewsController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
     
     @review = Review.new(review_params)
+
+    # Give the review the correct restaurant id. We've given it a rating and content, now it just needs an id.
     @review.restaurant = @restaurant
     if @review.save
       redirect_to restaurant_path(@restaurant)

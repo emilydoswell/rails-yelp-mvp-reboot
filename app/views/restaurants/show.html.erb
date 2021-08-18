@@ -18,6 +18,7 @@
       </table>
       
       <%# @restaurant.reviews is an array %>
+      <%# we can call .reviews in @restaurant because in our restaurant model it has_many reviews %>
        <div class="list-group">
         <% @restaurant.reviews.each do |review| %>
           <li class="list-group-item">
