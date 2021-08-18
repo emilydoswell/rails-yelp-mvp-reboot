@@ -9,3 +9,6 @@ class CreateReviews < ActiveRecord::Migration[6.0]
     end
   end
 end
+
+
+# rails g model review content:text rating:integer restaurant:references
