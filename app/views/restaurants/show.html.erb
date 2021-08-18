@@ -2,7 +2,7 @@
 <p><%= @restaurant.address %></p>
 
 <%= form_for [@restaurant, @review] do |f| %>
-  <%= f..number_field :rating %>%
+  <%= f.number_field :rating, collection: 0..5 %>
   <%= f.text_field :content %>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>
