@@ -21,6 +21,7 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
+    # You only need to put in here information that comes from your form
     params.require(:review).permit(:rating, :content)
   end
 end
