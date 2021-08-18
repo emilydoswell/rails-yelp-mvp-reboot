@@ -32,9 +32,11 @@
                 <% count += 1 %>
               <% end %>
             <p><%= review.content %></p>
+        <%= link_to "delete", review_path(review), method: :delete %>
           </li>
         <% end %>
       </div>
+
 
       <%# You can't just use @review because in the routes both reviews paths require @restaurant id as well. %>
       <h1>Reviews</h1>
